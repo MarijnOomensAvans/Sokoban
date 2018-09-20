@@ -7,9 +7,9 @@ namespace SokoBan
 {
     public class FloorTile : Tile
     {
-        public override Tile TileUp { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public override Tile TileDown { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public override Tile TileLeft { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public override Tile TileRight { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public override Tile TileUp { get; set; }
+        public override Tile TileDown { get; set; }
+        public override Tile TileLeft { get; set; }
+        public override Tile TileRight { get; set; }
     }
 }
