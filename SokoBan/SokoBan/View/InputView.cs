@@ -12,12 +12,14 @@ namespace SokoBan
             Console.WriteLine("Kies een doolhof, s is stop");
             int mazeNumber = 0;
             char input = '?';
-            while (mazeNumber < 1 || mazeNumber > 4 && input != 's')
+            while (((mazeNumber < 1) || (mazeNumber > 4)) && (input != 's'))
             {
-                input = Console.ReadKey().KeyChar;
+                ConsoleKeyInfo keyPressed = Console.ReadKey();
+                input = keyPressed.KeyChar;
+                Console.WriteLine();
                 if ((input >= '1') && (input <= '4'))
                 {
-                    mazeNumber = Convert.ToInt32(char.ToString(input));
+                    mazeNumber = Convert.ToInt32(char.ToString(keyPressed.KeyChar));
                 }
                 else if (input != 's')
                 {
