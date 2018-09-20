@@ -35,5 +35,13 @@ namespace SokoBan
             Console.WriteLine("└──────────┘");
             Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
         }
+
+        public void ShowVictoryScreen()
+        {
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
+            Console.WriteLine("");
+            Console.WriteLine("=== HOERA OPGELOST ===");
+            Console.WriteLine("press key to continue");
+        }
     }
 }

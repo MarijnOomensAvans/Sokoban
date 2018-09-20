@@ -7,5 +7,21 @@ namespace SokoBan
 {
     public class Crate
     {
+        private Tile _onTile;
+
+        public void putCrateOn(Tile t)
+        {
+            _onTile = t;
+        }
+
+        public bool isOnEndTile()
+        {
+            if (_onTile.GetType() == typeof(EndTile))
+            {
+                return true;
+            }
+            return false;
+        }
+
     }
 }

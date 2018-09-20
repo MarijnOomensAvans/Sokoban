@@ -11,6 +11,24 @@ namespace SokoBan
         public abstract Tile TileDown { get; set; }
         public abstract Tile TileLeft { get; set; }
         public abstract Tile TileRight { get; set; }
+        public Player Player { get; set; }
+        public Crate Crate { get; set; }
+
+        public Tile()
+        {
+            TileUp = null;
+            TileDown = null;
+            TileLeft = null;
+            TileRight = null;
+        }
+
+        public bool isOpen()
+        {
+            if ((Player == null) && (Crate = null) && ((this.GetType() == typeof(FloorTile)) || (this.GetType() ==  typeof(Wall))))
+            {
+
+            }
+        }
 
     }
 }
