@@ -43,22 +43,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller.cs" />
-    <Compile Include="Crate.cs" />
-    <Compile Include="EndTile.cs" />
-    <Compile Include="InputView.cs" />
-    <Compile Include="Maze.cs" />
-    <Compile Include="OutputView.cs" />
-    <Compile Include="Parser.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Controller\Controller.cs" />
+    <Compile Include="Model\EmptyTile.cs" />
+    <Compile Include="Model\FloorTile.cs" />
+    <Compile Include="Model\Crate.cs" />
+    <Compile Include="Model\EndTile.cs" />
+    <Compile Include="View\InputView.cs" />
+    <Compile Include="Model\Maze.cs" />
+    <Compile Include="View\OutputView.cs" />
+    <Compile Include="Parser\Parser.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="App\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tile.cs" />
-    <Compile Include="Wall.cs" />
+    <Compile Include="Model\Tile.cs" />
+    <Compile Include="Model\Wall.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram.cd" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

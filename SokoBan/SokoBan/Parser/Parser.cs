@@ -5,7 +5,13 @@ using System.Text;
 
 namespace SokoBan
 {
-    public class Tile
+    public class Parser
     {
+        private Maze maze;
+
+        public Parser()
+        {
+            
+        }
     }
 }
