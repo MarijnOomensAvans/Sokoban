@@ -32,6 +32,21 @@ namespace SokoBan
             return false;
         }
 
+        public bool hasPlayer()
+        {
+            if (Player != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        public void deletePlayer()
+        {
+            Player = null;
+        }
+
         public bool hasCrate()
         {
             if (Crate != null)
@@ -40,6 +55,11 @@ namespace SokoBan
             }
 
             return false;
+        }
+
+        public void deleteCrate()
+        {
+            Crate = null;
         }
 
     }

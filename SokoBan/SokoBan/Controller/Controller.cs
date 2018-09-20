@@ -33,10 +33,21 @@ namespace SokoBan
                     if (mazeChoice == -1)
                     {
                         playing = false;
-                        Environment.Exit(0);
                     }
+                }
+
+                if (playing)
+                {
+                    Console.WriteLine("Continued");
+                    //int option = PlayMaze();
                 }
             }
         }
+
+      //  private int PlayMaze()
+       // {
+            //bool levelFinished = false;
+
+       // }
     }
 }
