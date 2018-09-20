@@ -32,5 +32,15 @@ namespace SokoBan
             return false;
         }
 
+        public bool hasCrate()
+        {
+            if (Crate != null)
+            {
+                return true;
+            }
+
+            return false;
+        }
+
     }
 }
