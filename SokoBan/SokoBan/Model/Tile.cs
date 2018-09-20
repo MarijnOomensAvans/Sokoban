@@ -24,10 +24,12 @@ namespace SokoBan
 
         public bool isOpen()
         {
-            if ((Player == null) && (Crate = null) && ((this.GetType() == typeof(FloorTile)) || (this.GetType() ==  typeof(Wall))))
+            if ((Player == null) && (Crate == null) && ((this.GetType() == typeof(FloorTile)) || (this.GetType() ==  typeof(Wall))))
             {
-
+                return true;
             }
+
+            return false;
         }
 
     }
