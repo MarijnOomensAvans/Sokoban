@@ -9,11 +9,11 @@ namespace SokoBan
     {
         public int WhichLevel()
         {
-            Console.WriteLine("Kies een doolhof, s is stop");
             int mazeNumber = 0;
             char input = '?';
             while (((mazeNumber < 1) || (mazeNumber > 4)) && (input != 's'))
             {
+                Console.WriteLine("Kies een doolhof (1-4), s is stop");
                 ConsoleKeyInfo keyPressed = Console.ReadKey();
                 input = keyPressed.KeyChar;
                 Console.WriteLine();
