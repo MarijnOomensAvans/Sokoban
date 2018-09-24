@@ -20,17 +20,16 @@ namespace SokoBan
                 Console.WriteLine();
                 if ((input >= '1') && (input <= '4'))
                 {
-                    mazeNumber = Convert.ToInt32(char.ToString(keyPressed.KeyChar));
+                    mazeNumber = (int) char.GetNumericValue(keyPressed.KeyChar);
                 }
                 else if (input != 's')
                 {
                     Console.WriteLine("?");
                 }
             }
-
             if (input == 's')
             {
-                mazeNumber = -1;
+               Environment.Exit(0);
             }
             return mazeNumber;
         }

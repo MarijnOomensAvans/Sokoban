@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading;
 
 namespace SokoBan
 {
@@ -25,30 +24,25 @@ namespace SokoBan
             bool playing = true;
             int mazeChoice = 0;
             int number = 0;
-            while (playing)
-            {
-                if (number == 0)
-                {
-                    outputView.ShowStartScreen();
-                    mazeChoice = inputView.WhichLevel();
-                    if (mazeChoice == -1)
-                    {
-                        playing = false;
-                    }
-                }
 
-                if (playing)
-                {
-                    Console.WriteLine("Continued");
-                    //int option = PlayMaze();
-                }
+            outputView.ShowStartScreen();
+            mazeChoice = inputView.WhichLevel();
+            if (mazeChoice == -1)
+            {
+                playing = false;
+            }
+
+            if (playing)
+            {
+                Console.WriteLine("Continued");
+                //int option = PlayMaze();
             }
         }
 
-      //  private int PlayMaze()
-       // {
-            //bool levelFinished = false;
+        //  private int PlayMaze()
+        // {
+        //bool levelFinished = false;
 
-       // }
+        // }
     }
 }
