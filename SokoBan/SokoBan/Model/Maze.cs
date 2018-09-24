@@ -12,6 +12,14 @@ namespace SokoBan
         public List<Crate> CrateList { get; set; }
         public List<Tile> TileList { get; set; }
         public Tile OriginPoint { get; set; }
+        public int Width { get; set; }
+        public int Height { get; set; }
+
+        public Maze()
+        {
+            CrateList = new List<Crate>();
+            TileList = new List<Tile>();
+        }
 
         public void movePlayer(int direction)
         {

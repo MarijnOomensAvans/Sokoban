@@ -102,15 +102,18 @@ namespace SokoBan
                     FirstLine = false;
                 }
             }
+            currentMazeHeight();
+            currentMazeWidth();
+
             return Maze;
         }
 
-        public int currentMazeHeight()
+        public void currentMazeHeight()
         {
-            return MazeStringArray.Length;
+            Maze.Height = MazeStringArray.Length;
         }
 
-        public int currentMazeWidth()
+        public void currentMazeWidth()
         {
             int LineWidth = 0;
             int MaxLineWidth = 0;
@@ -127,7 +130,7 @@ namespace SokoBan
                 }
             }
 
-            return MaxLineWidth;
+            Maze.Width = MaxLineWidth;
         }
 
         public class GridList

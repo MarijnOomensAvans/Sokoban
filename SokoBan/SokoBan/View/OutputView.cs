@@ -38,9 +38,67 @@ namespace SokoBan
             Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
         }
 
-        private void DrawMaze(Maze maze)
+        private void DrawMaze(Maze Maze)
         {
-            
+            Tile Origin = Maze.OriginPoint;
+            Tile BelowOrigin = Maze.OriginPoint.TileDown;
+            for (int i = 0; i < Maze.Height; i++)
+            {
+                for (int j = 0; j < Maze.Width; j++)
+                {
+                    switch (Origin.GetType().ToString())
+                    {
+                        case "FloorTile":
+                            if (Origin.hasCrate())
+                            {
+                                Console.Write("o");
+                            }
+                            else if(Origin.hasPlayer())
+                            {
+                                Console.Write("@");
+                            }
+                            else
+                            {
+                                Console.Write("/x00b7");
+                            }
+                            break;
+
+                        case "Wall":
+                            Console.Write("#");
+                            break;
+                        case "EndTile":
+                            if (Origin.hasCrate())
+                            {
+                                Console.Write("0");
+                            }
+                            else if (Origin.hasPlayer())
+                            {
+                                Console.Write("@");
+                            }
+                            else
+                            {
+                                Console.Write("x");
+                            }
+
+                            break;
+                        case "EmptyTile":
+                            Console.Write(" ");
+                            break;
+                        default:
+                            Console.Write("?");
+                            break;
+                    }
+
+                    Origin = Origin.TileRight;
+                }
+
+                Origin = BelowOrigin;
+                if (BelowOrigin != null)
+                {
+                    BelowOrigin = Origin.TileDown;
+                }
+            }
+
         }
 
         public void ShowVictoryScreen()
