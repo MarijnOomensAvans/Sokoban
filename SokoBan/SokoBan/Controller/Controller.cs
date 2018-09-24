@@ -34,15 +34,15 @@ namespace SokoBan
 
             if (playing)
             {
-                Console.WriteLine("Continued");
-                //int option = PlayMaze();
+                maze = parser.parseMaze(mazeChoice);
+                int option = PlayMaze();
             }
         }
 
-        //  private int PlayMaze()
-        // {
-        //bool levelFinished = false;
+        private int PlayMaze()
+        {
+            bool levelFinished = false;
 
-        // }
+        }
     }
 }
