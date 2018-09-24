@@ -10,14 +10,14 @@
   <Class Name="SokoBan.InputView">
     <Position X="5.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>View\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.OutputView">
     <Position X="9.75" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAQAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAQAQAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -54,14 +54,14 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SokoBan.Tile">
-    <Position X="7.75" Y="6.5" Width="1.5" />
+    <Position X="10" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAABAAAAAAAAAAAMIAhABAAAAAASAAAAg=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Wall">
-    <Position X="8.5" Y="8.5" Width="1.5" />
+    <Position X="8.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
@@ -70,12 +70,12 @@
   <Class Name="SokoBan.Crate">
     <Position X="3.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Model\Crate.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.EndTile">
-    <Position X="10.5" Y="8.5" Width="1.5" />
+    <Position X="10.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\EndTile.cs</FileName>
@@ -89,14 +89,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.FloorTile">
-    <Position X="6.75" Y="8.5" Width="1.5" />
+    <Position X="6.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\FloorTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.EmptyTile">
-    <Position X="5" Y="8.5" Width="1.5" />
+    <Position X="5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\EmptyTile.cs</FileName>
