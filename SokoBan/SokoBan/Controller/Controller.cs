@@ -37,7 +37,12 @@ namespace SokoBan
                 maze = parser.parseMaze(mazeChoice);
                 outputView.ShowMaze(maze);
                 int option = PlayMaze();
-
+                if (option == 1)
+                {
+                    outputView.ShowMaze(maze);
+                    outputView.ShowVictoryScreen();
+                    Console.ReadLine();
+                }
             }
         }
 
@@ -61,9 +66,13 @@ namespace SokoBan
                 maze.movePlayer(result);
                 if (maze.CheckGameWon())
                 {
-
+                    levelFinished = true;
+                    number = 1;
                 }
+                outputView.ShowMaze(maze);
             }
+
+            return number;
         }
     }
 }
