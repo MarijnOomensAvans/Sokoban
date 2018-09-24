@@ -59,7 +59,10 @@ namespace SokoBan
                 }
 
                 maze.movePlayer(result);
+                if (maze.CheckGameWon())
+                {
 
+                }
             }
         }
     }
