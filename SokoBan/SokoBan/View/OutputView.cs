@@ -34,6 +34,13 @@ namespace SokoBan
             Console.WriteLine("| Sokoban  |");
             Console.WriteLine("└──────────┘");
             Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
+            DrawMaze(maze);
+            Console.WriteLine("─────────────────────────────────────────────────────────────────────────");
+        }
+
+        private void DrawMaze(Maze maze)
+        {
+            
         }
 
         public void ShowVictoryScreen()
