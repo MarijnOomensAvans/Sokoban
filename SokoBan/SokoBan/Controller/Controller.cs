@@ -35,14 +35,32 @@ namespace SokoBan
             if (playing)
             {
                 maze = parser.parseMaze(mazeChoice);
+                outputView.ShowMaze(maze);
                 int option = PlayMaze();
+
             }
         }
 
         private int PlayMaze()
         {
             bool levelFinished = false;
+            int number = 0;
+            while (!levelFinished)
+            {
+                int result = inputView.GetDirection();
+                if (result == -2)
+                {
+                    return -2;
+                }
 
+                if (result == -1)
+                {
+                    return -1;
+                }
+
+                maze.movePlayer(result);
+
+            }
         }
     }
 }

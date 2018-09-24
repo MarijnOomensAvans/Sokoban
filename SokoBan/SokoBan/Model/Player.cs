@@ -16,7 +16,8 @@ namespace SokoBan
 
         public void MoveTo(int direction)
         {
-
+            Tile tile = onTile.movePlayerTile(direction);
+            onTile = tile;
         }
     }
 }

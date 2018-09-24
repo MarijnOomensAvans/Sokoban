@@ -11,6 +11,81 @@ namespace SokoBan
         public abstract Tile TileDown { get; set; }
         public abstract Tile TileLeft { get; set; }
         public abstract Tile TileRight { get; set; }
+
+        internal Tile movePlayerTile(int direction)
+        {
+            Tile destination = null;
+            switch (direction)
+            {
+                case 1:
+                    destination = TileUp;
+                    break;
+                case 2:
+                    destination = TileDown;
+                    break;
+                case 3:
+                    destination = TileLeft;
+                    break;
+                case 4:
+                    destination = TileRight;
+                    break;
+            }
+
+            if (destination.hasCrate())
+            {
+                destination.moveCrate(direction);
+            }
+
+            if (destination != null && destination.isOpen() && !destination.hasCrate())
+            {
+                destination.setPlayer(Player);
+                deletePlayer();
+                return destination;
+            }
+            else
+            {
+                return null;
+            }
+            
+        }
+
+        private void setPlayer(Player player)
+        {
+            Player = player;
+        }
+
+        private void moveCrate(int direction)
+        {
+            Tile destination = null;
+            switch (direction)
+            {
+                case 1:
+                    destination = TileUp;
+                    break;
+                case 2:
+                    destination = TileDown;
+                    break;
+                case 3:
+                    destination = TileLeft;
+                    break;
+                case 4:
+                    destination = TileRight;
+                    break;
+            }
+
+            if (destination != null && destination.isOpen())
+            {
+                destination.placeCrate(Crate);
+            }
+
+        }
+
+        private void placeCrate(Crate crate)
+        {
+            Crate = crate;
+            Crate.putCrateOn(this);
+        }
+
         public Player Player { get; set; }
         public Crate Crate { get; set; }
 

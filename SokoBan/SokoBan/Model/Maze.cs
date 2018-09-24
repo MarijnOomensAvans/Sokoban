@@ -63,5 +63,10 @@ namespace SokoBan
                 }
             }
         }
+
+        public void movePlayer(int direction)
+        {
+            Player.MoveTo(direction);
+        }
     }
 }

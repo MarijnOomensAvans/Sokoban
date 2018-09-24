@@ -27,7 +27,7 @@ namespace SokoBan
             Console.WriteLine();
         }
 
-        public void ShowMaze()
+        public void ShowMaze(Maze maze)
         {
             Console.Clear();
             Console.WriteLine("┌──────────┐");
