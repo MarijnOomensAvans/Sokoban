@@ -10,6 +10,7 @@ namespace SokoBan
     {
         private Maze Maze;
         public GridList map;
+        private string[] MazeStringArray;
 
         public Maze parseMaze(int level)
         {
@@ -18,7 +19,7 @@ namespace SokoBan
                 Maze = new Maze();
                 Tile CurrentTile;
                 string txtFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName.ToString();
-                String[] MazeStringArray =
+                MazeStringArray =
                     System.IO.File.ReadAllLines(@"" + txtFile + "/Sokoban/Doolhoffen/doolhof" + level + ".txt");
 
                 bool FirstLine = true;
@@ -103,6 +104,32 @@ namespace SokoBan
             }
             return Maze;
         }
+
+        public int currentMazeHeight()
+        {
+            return MazeStringArray.Length;
+        }
+
+        public int currentMazeWidth()
+        {
+            int LineWidth = 0;
+            int MaxLineWidth = 0;
+            foreach (string s in MazeStringArray)
+            {
+                foreach (char c in s)
+                {
+                    LineWidth++;
+                }
+
+                if (LineWidth > MaxLineWidth)
+                {
+                    MaxLineWidth = LineWidth;
+                }
+            }
+
+            return MaxLineWidth;
+        }
+
         public class GridList
         {
             public Tile FirstTile;
