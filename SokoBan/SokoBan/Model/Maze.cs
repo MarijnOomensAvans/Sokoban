@@ -17,5 +17,26 @@ namespace SokoBan
         {
             Player.MoveTo(direction);
         }
+
+        public bool CheckGameWon()
+        {
+            int size = 0;
+            int complete = 0;
+            foreach (Crate c in CrateList)
+            {
+                size++;
+                if (c.isOnEndTile())
+                {
+                    complete++;
+                }
+            }
+
+            if (size == complete)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }
