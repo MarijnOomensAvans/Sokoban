@@ -23,7 +23,7 @@ namespace SokoBan
             Parser parser = new Parser();
             bool playing = true;
             int mazeChoice = 0;
-            int number = 0;
+            //int number = 0;
 
             outputView.ShowStartScreen();
             mazeChoice = inputView.WhichLevel();
