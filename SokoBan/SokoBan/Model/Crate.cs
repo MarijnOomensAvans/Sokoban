@@ -14,7 +14,7 @@ namespace SokoBan
             _onTile = t;
         }
 
-        public bool isOnEndTile()
+        public bool isOnEndTile() // TODO wordt niet gebruikt voor einde level
         {
             if (_onTile.GetType() == typeof(EndTile))
             {
