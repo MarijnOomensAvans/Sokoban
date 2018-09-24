@@ -11,7 +11,7 @@ namespace SokoBan
         private Maze Maze;
         public GridList map;
 
-        public Parser(int level)
+        public Maze parseMaze(int level)
         {
             {
                 map = new GridList();
@@ -101,6 +101,7 @@ namespace SokoBan
                     FirstLine = false;
                 }
             }
+            return Maze;
         }
         public class GridList
         {
