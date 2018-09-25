@@ -48,7 +48,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SokoBan.Maze">
-    <Position X="6.75" Y="5.75" Width="1.5" />
+    <Position X="6.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAABABACAAAAAACAAAEAAAAAAAAAAAAAAAQAgEAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
