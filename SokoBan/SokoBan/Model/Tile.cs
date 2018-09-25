@@ -42,11 +42,8 @@ namespace SokoBan
                 deletePlayer();
                 return destination;
             }
-            else
-            {
+
                 return null;
-            }
-            
         }
 
         private void setPlayer(Player player)

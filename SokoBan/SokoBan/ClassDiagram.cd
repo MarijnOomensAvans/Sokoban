@@ -31,7 +31,7 @@
       </Class>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAEEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <HashCode>AAAEEAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAAAAIBAAA=</HashCode>
       <FileName>Parser\Parser.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -50,7 +50,7 @@
   <Class Name="SokoBan.Maze">
     <Position X="5.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAACAAAAAACAAAAAAAAAAACAAAQAAAQAAEAA=</HashCode>
+      <HashCode>AAAAAAAABACAAAAAACAAAEAAAAAAACAAAQAAAQAAEAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -60,14 +60,14 @@
   <Class Name="SokoBan.Tile">
     <Position X="10" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEIAEABAACAAQAAAAAMIAhABAAAAAASAAAAg=</HashCode>
+      <HashCode>AAAAAAAAEIAEABAACAAQAAAAAMIAhABAAAAAASAEAAg=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Wall">
     <Position X="8.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -81,7 +81,7 @@
   <Class Name="SokoBan.EndTile">
     <Position X="10.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\EndTile.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -95,14 +95,14 @@
   <Class Name="SokoBan.FloorTile">
     <Position X="6.75" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\FloorTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.EmptyTile">
     <Position X="5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\EmptyTile.cs</FileName>
     </TypeIdentifier>
   </Class>
