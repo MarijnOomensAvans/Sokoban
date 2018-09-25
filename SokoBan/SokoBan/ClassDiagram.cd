@@ -50,11 +50,7 @@
   <Class Name="SokoBan.Maze">
     <Position X="6.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-<<<<<<< HEAD
       <HashCode>AAAAAAAABACAAAAQACAAAEAAAAAAAAAAAAAAAQAAEAA=</HashCode>
-=======
-      <HashCode>AAAAAAAABACAAAAAACAAAEAAAAAAACAAAQAAAQAAEAA=</HashCode>
->>>>>>> 05032a624588d083f9be772a362101ca5f4b501e
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
