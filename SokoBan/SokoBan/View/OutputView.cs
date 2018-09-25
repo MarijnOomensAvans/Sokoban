@@ -47,9 +47,9 @@ namespace SokoBan
                 for (int j = 0; j < Maze.Width; j++)
                 {
                     Console.Write(Origin.Print());
-
                     Origin = Origin.TileRight;
                 }
+                Console.WriteLine();
 
                 Origin = BelowOrigin;
                 if (BelowOrigin != null)

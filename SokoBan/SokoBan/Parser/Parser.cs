@@ -116,22 +116,7 @@ namespace SokoBan
 
         public void currentMazeWidth()
         {
-            int LineWidth = 0;
-            int MaxLineWidth = 0;
-            foreach (string s in MazeStringArray)
-            {
-                foreach (char c in s)
-                {
-                    LineWidth++;
-                }
-
-                if (LineWidth > MaxLineWidth)
-                {
-                    MaxLineWidth = LineWidth;
-                }
-            }
-
-            Maze.Width = MaxLineWidth;
+            Maze.Width = MazeStringArray[0].Length;
         }
 
         public class GridList
