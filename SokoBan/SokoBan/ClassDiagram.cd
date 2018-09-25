@@ -50,16 +50,13 @@
   <Class Name="SokoBan.Maze">
     <Position X="6.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABACAAAAQACAAAEAAAAAAAAAAAAAAAQAAEAA=</HashCode>
+      <HashCode>AAAAAABABACAAAAAACAAAEAAAAAAAAAAAAAAAQAgEAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Player" />
       <Property Name="OriginPoint" />
     </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="EndTileList" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="SokoBan.Tile">
     <Position X="10" Y="4.75" Width="1.5" />
@@ -114,21 +111,21 @@
     <Position X="1" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Movable.cs</FileName>
+      <FileName>Model\Movable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Sleeper">
     <Position X="2.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Sleeper.cs</FileName>
+      <FileName>Model\Sleeper.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.TrapTile">
     <Position X="12.5" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
-      <FileName>TrapTile.cs</FileName>
+      <FileName>Model\TrapTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

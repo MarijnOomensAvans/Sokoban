@@ -46,7 +46,7 @@ namespace SokoBan
                                 break;
                             case 'x':
                                 t = new EndTile();
-                                Maze.EndTileList.Add((EndTile)t);
+                                Maze.AmountOfEndTiles++;
                                 break;
                             case '@':
                                 t = new FloorTile();

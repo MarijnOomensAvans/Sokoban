@@ -14,12 +14,12 @@ namespace SokoBan
 
         public override bool CanMove(int direction)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); // TODO
         }
 
         public override void Move(int direction)
         {
-            throw new NotImplementedException();
+            throw new NotImplementedException(); // TODO
         }
 
     }

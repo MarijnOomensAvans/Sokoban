@@ -9,15 +9,11 @@ namespace SokoBan
     public class Maze
     {
         public Player Player { get; set; }
-        public List<EndTile> EndTileList { get; set; }
         public Tile OriginPoint { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
-
-        public Maze()
-        {
-            EndTileList = new List<EndTile>();
-        }
+        public int AmountOfEndTiles { get; set; }
+        public int CratesOnEndTiles { get; set; } //TODO moet nog worden opgehoogd
 
         public void movePlayer(int direction)
         {
@@ -26,23 +22,7 @@ namespace SokoBan
 
         public bool CheckGameWon()
         {
-            int size = 0;
-            int complete = 0;
-            foreach (EndTile t in EndTileList)
-            {
-                size++;
-                if (t.hasCrate())
-                {
-                    complete++;
-                }
-            }
-
-            if (size == complete)
-            {
-                return true;
-            }
-
-            return false;
+            return (CratesOnEndTiles == AmountOfEndTiles);
         }
     }
 }
