@@ -5,22 +5,21 @@ using System.Text;
 
 namespace SokoBan
 {
-    public class Crate
+    public class Crate : Movable
     {
-        private Tile _onTile;
-
-        public void putCrateOn(Tile t)
+        public Crate(Tile t)
         {
-            _onTile = t;
+            onTile = t;
         }
 
-        public bool isOnEndTile()
+        public override bool CanMove(int direction)
         {
-            if (_onTile.GetType() is EndTile)
-            {
-                return true;
-            }
-            return false;
+            throw new NotImplementedException();
+        }
+
+        public override void Move(int direction)
+        {
+            throw new NotImplementedException();
         }
 
     }

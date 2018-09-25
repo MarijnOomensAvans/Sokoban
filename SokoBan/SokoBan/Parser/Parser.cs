@@ -38,14 +38,15 @@ namespace SokoBan
                                 break;
                             case 'o':
                                 t = new FloorTile();
-                                t.Crate = new Crate();
-                                Maze.CrateList.Add(t.Crate);
+                                Crate crate = new Crate(t);
+                                t.Crate = crate;
                                 break;
                             case '#':
                                 t = new Wall();
                                 break;
                             case 'x':
                                 t = new EndTile();
+                                Maze.EndTileList.Add((EndTile)t);
                                 break;
                             case '@':
                                 t = new FloorTile();
@@ -56,7 +57,6 @@ namespace SokoBan
                                 t = new EmptyTile();
                                 break;
                         }
-                        Maze.TileList.Add(t);
 
                         if (FirstLine)
                         {

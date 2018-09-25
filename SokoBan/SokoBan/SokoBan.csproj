@@ -48,6 +48,9 @@
     <Compile Include="Model\FloorTile.cs" />
     <Compile Include="Model\Crate.cs" />
     <Compile Include="Model\EndTile.cs" />
+    <Compile Include="Movable.cs" />
+    <Compile Include="Sleeper.cs" />
+    <Compile Include="TrapTile.cs" />
     <Compile Include="View\InputView.cs" />
     <Compile Include="Model\Maze.cs" />
     <Compile Include="View\OutputView.cs" />

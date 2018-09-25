@@ -83,19 +83,10 @@ namespace SokoBan
         private void placeCrate(Crate crate)
         {
             Crate = crate;
-            Crate.putCrateOn(this);
         }
 
         public Player Player { get; set; }
         public Crate Crate { get; set; }
-
-        public Tile()
-        {
-            TileUp = null;
-            TileDown = null;
-            TileLeft = null;
-            TileRight = null;
-        }
 
         public bool isOpen()
         {

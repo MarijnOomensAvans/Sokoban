@@ -5,14 +5,8 @@ using System.Text;
 
 namespace SokoBan
 {
-    public class Player : Movable
+    public class Sleeper : Movable
     {
-
-        public Player(Tile t)
-        {
-            onTile = t;
-        }
-
         public override bool CanMove(int direction)
         {
             throw new NotImplementedException();
@@ -21,12 +15,6 @@ namespace SokoBan
         public override void Move(int direction)
         {
             throw new NotImplementedException();
-        }
-
-        public void MoveTo(int direction)
-        {
-            Tile tile = onTile.movePlayerTile(direction);
-            onTile = tile;
         }
     }
 }

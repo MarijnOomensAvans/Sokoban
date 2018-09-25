@@ -9,16 +9,14 @@ namespace SokoBan
     public class Maze
     {
         public Player Player { get; set; }
-        public List<Crate> CrateList { get; set; }
-        public List<Tile> TileList { get; set; }
+        public List<EndTile> EndTileList { get; set; }
         public Tile OriginPoint { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
 
         public Maze()
         {
-            CrateList = new List<Crate>();
-            TileList = new List<Tile>();
+            EndTileList = new List<EndTile>();
         }
 
         public void movePlayer(int direction)
@@ -30,10 +28,10 @@ namespace SokoBan
         {
             int size = 0;
             int complete = 0;
-            foreach (Crate c in CrateList)
+            foreach (EndTile t in EndTileList)
             {
                 size++;
-                if (c.isOnEndTile())
+                if (t.hasCrate())
                 {
                     complete++;
                 }
