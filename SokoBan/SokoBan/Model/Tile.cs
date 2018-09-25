@@ -137,5 +137,7 @@ namespace SokoBan
             Crate = null;
         }
 
+        public abstract char Print();
+
     }
 }

@@ -17,13 +17,13 @@ namespace SokoBan
             {
                 map = new GridList();
                 Maze = new Maze();
-                Tile CurrentTile;
                 string txtFile = Directory.GetParent(Directory.GetCurrentDirectory()).Parent.Parent.FullName.ToString();
                 MazeStringArray =
                     System.IO.File.ReadAllLines(@"" + txtFile + "/Sokoban/Doolhoffen/doolhof" + level + ".txt");
 
                 bool FirstLine = true;
                 bool FirstChar = true;
+                bool FirstLineAndChar = true;
 
                 foreach (string MazeLine in MazeStringArray)
                 {
@@ -60,12 +60,12 @@ namespace SokoBan
 
                         if (FirstLine)
                         {
-                            if (FirstChar)
+                            if (FirstLineAndChar)
                             {
                                 Maze.OriginPoint = t;
                                 map.FirstTile = t;
-                                CurrentTile = t;
-                                FirstChar = false;
+                                map.CurrentTile = t;
+                                FirstLineAndChar = false;
                             }
                             else
                             {
@@ -93,6 +93,7 @@ namespace SokoBan
                             {
                                 map.CurrentTile.TileRight = t;
                                 t.TileLeft = map.CurrentTile;
+                                t.TileUp = map.CurrentTile.TileUp.TileRight;
                                 t.TileUp.TileDown = t;
                                 map.CurrentTile = map.CurrentTile.TileRight;
                             }

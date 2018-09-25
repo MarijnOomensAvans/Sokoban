@@ -46,48 +46,7 @@ namespace SokoBan
             {
                 for (int j = 0; j < Maze.Width; j++)
                 {
-                    switch (Origin.GetType().ToString())
-                    {
-                        case "FloorTile":
-                            if (Origin.hasCrate())
-                            {
-                                Console.Write("o");
-                            }
-                            else if(Origin.hasPlayer())
-                            {
-                                Console.Write("@");
-                            }
-                            else
-                            {
-                                Console.Write("/x00b7");
-                            }
-                            break;
-
-                        case "Wall":
-                            Console.Write("#");
-                            break;
-                        case "EndTile":
-                            if (Origin.hasCrate())
-                            {
-                                Console.Write("0");
-                            }
-                            else if (Origin.hasPlayer())
-                            {
-                                Console.Write("@");
-                            }
-                            else
-                            {
-                                Console.Write("x");
-                            }
-
-                            break;
-                        case "EmptyTile":
-                            Console.Write(" ");
-                            break;
-                        default:
-                            Console.Write("?");
-                            break;
-                    }
+                    Console.Write(Origin.Print());
 
                     Origin = Origin.TileRight;
                 }
