@@ -79,7 +79,7 @@ namespace SokoBan
                             if (FirstChar)
                             {
                                 Tile cTile = map.FirstTile;
-                                if (cTile.TileDown != null)
+                                while (cTile.TileDown != null)
                                 {
                                     cTile = cTile.TileDown;
                                 }

@@ -50,14 +50,12 @@ namespace SokoBan
                     Origin = Origin.TileRight;
                 }
                 Console.WriteLine();
-
                 Origin = BelowOrigin;
                 if (BelowOrigin != null)
                 {
                     BelowOrigin = Origin.TileDown;
                 }
             }
-
         }
 
         public void ShowVictoryScreen()
