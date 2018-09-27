@@ -17,7 +17,10 @@ namespace SokoBan
 
         public void movePlayer(int direction)
         {
-            Player.MoveTo(direction);
+            if (Player.CanMove(direction))
+            {
+                Player.Move(direction);
+            }
         }
 
         public bool CheckGameWon()
