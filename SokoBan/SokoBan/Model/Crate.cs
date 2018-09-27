@@ -14,12 +14,17 @@ namespace SokoBan
 
         public override bool CanMove(int direction)
         {
-            throw new NotImplementedException();
+            if (onTile.checkIfCrateCanMove(direction))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public override void Move(int direction)
         {
-            throw new NotImplementedException(); // TODO
+            Tile tile = onTile.moveCrateTile(direction);
         }
     }
 }

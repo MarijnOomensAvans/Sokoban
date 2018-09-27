@@ -12,6 +12,63 @@ namespace SokoBan
         public abstract Tile TileLeft { get; set; }
         public abstract Tile TileRight { get; set; }
 
+        internal bool checkIfCrateCanMove(int direction)
+        {
+            Tile destination = null;
+            switch (direction)
+            {
+                case 1:
+                    destination = TileUp;
+                    break;
+                case 2:
+                    destination = TileDown;
+                    break;
+                case 3:
+                    destination = TileLeft;
+                    break;
+                case 4:
+                    destination = TileRight;
+                    break;
+            }
+
+            if (destination != null && !destination.hasCrate() && destination.Print() != '#')
+            {
+                return true;
+            }
+
+            return false;
+        }
+
+        internal Tile moveCrateTile(int direction)
+        {
+            Tile destination = null;
+            switch (direction)
+            {
+                case 1:
+                    destination = TileUp;
+                    break;
+                case 2:
+                    destination = TileDown;
+                    break;
+                case 3:
+                    destination = TileLeft;
+                    break;
+                case 4:
+                    destination = TileRight;
+                    break;
+            }
+
+
+            if (destination != null && !destination.hasCrate())
+            {
+                destination.placeCrate(Crate);
+                deleteCrate();
+                return destination;
+            }
+
+            return null;
+        }
+
         internal bool checkIfPlayerCanMove(int direction)
         {
             Tile destination = null;
@@ -40,7 +97,8 @@ namespace SokoBan
             {
                 if (destination.Crate.CanMove(direction))
                 {
-                    
+                    destination.Crate.Move(direction);
+                    movePlayerTile(direction);
                 }
                 
             }
