@@ -28,6 +28,7 @@ namespace SokoBan
         public override void Move(int direction)
         {
             Tile tile = onTile.moveMovable(direction);
+            onTile = tile;
         }
     }
 }

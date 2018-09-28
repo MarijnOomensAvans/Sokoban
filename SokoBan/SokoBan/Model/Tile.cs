@@ -43,7 +43,7 @@ namespace SokoBan
                     if (destination.Movable.CanMove(direction))
                     {
                         destination.Movable.Move(direction);
-                        moveMovable(direction);
+                        return true;
                     }
 
                 }
