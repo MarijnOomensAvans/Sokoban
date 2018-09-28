@@ -39,7 +39,7 @@ namespace SokoBan
                             case 'o':
                                 t = new FloorTile();
                                 Crate crate = new Crate(t);
-                                t.Crate = crate;
+                                t.Movable = crate;
                                 break;
                             case '#':
                                 t = new Wall();
@@ -51,7 +51,7 @@ namespace SokoBan
                             case '@':
                                 t = new FloorTile();
                                 Maze.Player = new Player(t);
-                                t.Player = Maze.Player;
+                                t.Movable = Maze.Player;
                                 break;
                             default:
                                 t = new EmptyTile();

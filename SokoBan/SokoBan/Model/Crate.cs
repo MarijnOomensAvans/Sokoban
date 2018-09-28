@@ -7,14 +7,17 @@ namespace SokoBan
 {
     public class Crate : Movable
     {
+
         public Crate(Tile t)
         {
             onTile = t;
+            Type = 1;
         }
+
 
         public override bool CanMove(int direction)
         {
-            if (onTile.checkIfCrateCanMove(direction))
+            if (onTile.checkIfPMovableCanMove(direction))
             {
                 return true;
             }
@@ -24,7 +27,7 @@ namespace SokoBan
 
         public override void Move(int direction)
         {
-            Tile tile = onTile.moveCrateTile(direction);
+            Tile tile = onTile.moveMovable(direction);
         }
     }
 }

@@ -14,14 +14,17 @@ namespace SokoBan
 
         public override char Print()
         {
-            if (hasPlayer())
+            if (HasMovable())
             {
-                return '@';
-            }
+                if (GetMovableType() == 0)
+                {
+                    return '@';
+                }
 
-            if (hasCrate())
-            {
-                return 'o';
+                if (GetMovableType() == 1)
+                {
+                    return 'o';
+                }
             }
 
             return '~';

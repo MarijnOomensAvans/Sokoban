@@ -12,7 +12,7 @@ namespace SokoBan
         public abstract Tile TileLeft { get; set; }
         public abstract Tile TileRight { get; set; }
 
-        internal bool checkIfCrateCanMove(int direction)
+        internal bool checkIfPMovableCanMove(int direction)
         {
             Tile destination = null;
             switch (direction)
@@ -31,74 +31,17 @@ namespace SokoBan
                     break;
             }
 
-            if (destination != null && !destination.hasCrate() && destination.Print() != '#')
+            if (destination != null && !destination.HasMovable() && destination.Print() != '#')
             {
                 return true;
             }
 
-            return false;
-        }
-
-        internal Tile moveCrateTile(int direction)
-        {
-            Tile destination = null;
-            switch (direction)
-            {
-                case 1:
-                    destination = TileUp;
-                    break;
-                case 2:
-                    destination = TileDown;
-                    break;
-                case 3:
-                    destination = TileLeft;
-                    break;
-                case 4:
-                    destination = TileRight;
-                    break;
-            }
-
-
-            if (destination != null && !destination.hasCrate())
-            {
-                destination.placeCrate(Crate);
-                deleteCrate();
-                return destination;
-            }
-
-            return null;
-        }
-
-        internal bool checkIfPlayerCanMove(int direction)
-        {
-            Tile destination = null;
-            switch (direction)
-            {
-                case 1:
-                    destination = TileUp;
-                    break;
-                case 2:
-                    destination = TileDown;
-                    break;
-                case 3:
-                    destination = TileLeft;
-                    break;
-                case 4:
-                    destination = TileRight;
-                    break;
-            }
-
-            if (destination != null && !destination.hasCrate() && destination.Print() != '#')
-            {
-                return true;
-            }
-
-            if (destination.hasCrate())
-            {
-                if (destination.Crate.CanMove(direction))
+            if (destination.Movable.Type == 1 && Movable.Type == 0)
+            { 
+                if (destination.Movable.CanMove(direction))
                 {
-                    destination.Crate.Move(direction);
-                    movePlayerTile(direction);
+                    destination.Movable.Move(direction);
+                    moveMovable(direction);
                 }
                 
             }
@@ -106,7 +49,7 @@ namespace SokoBan
             return false;
         }
 
-        internal Tile movePlayerTile(int direction)
+        internal Tile moveMovable(int direction)
         {
             Tile destination = null;
             switch (direction)
@@ -126,33 +69,27 @@ namespace SokoBan
             }
 
 
-            if (destination != null && !destination.hasCrate())
+            if (destination != null && !destination.HasMovable())
             {
-                destination.setPlayer(Player);
-                deletePlayer();
+                destination.SetMovable(Movable);
+                deleteMovable();
                 return destination;
             }
 
             return null;
         }
 
-        private void setPlayer(Player player)
+        private void SetMovable(Movable movabable)
         {
-            Player = player;
+            Movable = movabable;
         }
 
-        private void placeCrate(Crate crate)
+        public Movable Movable { get; set; }
+
+
+        public bool HasMovable()
         {
-            Crate = crate;
-        }
-
-        public Player Player { get; set; }
-        public Crate Crate { get; set; }
-
-
-        public bool hasPlayer()
-        {
-            if (Player != null)
+            if (Movable != null)
             {
                 return true;
             }
@@ -160,24 +97,14 @@ namespace SokoBan
             return false;
         }
 
-        public void deletePlayer()
+        public int GetMovableType()
         {
-            Player = null;
+            return Movable.Type;
         }
 
-        public bool hasCrate()
+        public void deleteMovable()
         {
-            if (Crate != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public void deleteCrate()
-        {
-            Crate = null;
+            Movable = null;
         }
 
         public abstract char Print();
