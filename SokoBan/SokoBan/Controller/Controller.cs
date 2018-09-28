@@ -67,6 +67,7 @@ namespace SokoBan
                 if (maze.CheckGameWon())
                 {
                     levelFinished = true;
+                    Maze.CratesOnEndTiles = 0;
                     number = 1;
                 }
                 outputView.ShowMaze(maze);

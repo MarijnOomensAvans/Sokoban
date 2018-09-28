@@ -13,7 +13,7 @@ namespace SokoBan
         public int Width { get; set; }
         public int Height { get; set; }
         public int AmountOfEndTiles { get; set; }
-        public int CratesOnEndTiles { get; set; } //TODO moet nog worden opgehoogd
+        public static int CratesOnEndTiles { get; set; }
 
         public void movePlayer(int direction)
         {

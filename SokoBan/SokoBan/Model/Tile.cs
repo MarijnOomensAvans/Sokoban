@@ -74,6 +74,10 @@ namespace SokoBan
 
             if (destination != null && !destination.HasMovable())
             {
+                if (destination.Print()== 'x' && Movable.Type == 1)
+                {
+                    Maze.CratesOnEndTiles++;
+                }
                 destination.SetMovable(Movable);
                 deleteMovable();
                 return destination;
