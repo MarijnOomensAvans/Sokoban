@@ -9,6 +9,7 @@ namespace SokoBan
     {
         public Sleeper()
         {
+            State = 1; // state 1 is awake, state 2 is asleep
             Type = 2;
         }
 
@@ -20,6 +21,30 @@ namespace SokoBan
         public override void Move(int direction)
         {
             throw new NotImplementedException();
+        }
+
+        public int SleeperStateOnPlayerAction()
+        {
+            Random r = new Random();
+            int randomNumber;
+            if (State == 1) // if awake
+            {
+                randomNumber = r.Next(1, 5);
+                if (randomNumber == 4)
+                {
+                    State = 2; // go to sleep
+                }
+                return State;
+            }
+            else // if asleep
+            {
+                randomNumber = r.Next(1, 11);
+                if (randomNumber == 8)
+                {
+                    State = 1;
+                }
+                return State;
+            }
         }
     }
 }
