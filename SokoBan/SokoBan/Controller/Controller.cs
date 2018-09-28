@@ -41,7 +41,9 @@ namespace SokoBan
                 {
                     outputView.ShowMaze(maze);
                     outputView.ShowVictoryScreen();
-                    Console.ReadLine();
+                    Console.ReadKey();
+                    Console.Clear();
+                    StartGame();
                 }
             }
         }
