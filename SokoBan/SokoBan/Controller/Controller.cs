@@ -37,6 +37,18 @@ namespace SokoBan
                 maze = parser.parseMaze(mazeChoice);
                 outputView.ShowMaze(maze);
                 int option = PlayMaze();
+                if (option == -1)
+                {
+                    outputView.ShowMaze(maze);
+                    Console.Clear();
+                    StartGame();
+                }
+
+                if (option == -2)
+                {
+                    maze = parser.parseMaze(mazeChoice);
+                    outputView.ShowMaze(maze);
+                }
                 if (option == 1)
                 {
                     outputView.ShowMaze(maze);
