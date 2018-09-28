@@ -25,6 +25,11 @@ namespace SokoBan
                 {
                     return '0';
                 }
+
+                if (GetMovableType() == 2)
+                {
+//                    if (Movable.State ==)
+                }
             }
 
             return'x';

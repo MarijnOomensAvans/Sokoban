@@ -7,6 +7,11 @@ namespace SokoBan
 {
     public class Sleeper : Movable
     {
+        public Sleeper()
+        {
+            Type = 2;
+        }
+
         public override bool CanMove(int direction)
         {
             throw new NotImplementedException();
