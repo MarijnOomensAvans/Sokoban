@@ -28,7 +28,12 @@ namespace SokoBan
 
                 if (GetMovableType() == 2)
                 {
-//                    if (Movable.State ==)
+                    if (Movable.State == 1)
+                    {
+                        return '$';
+                    }
+
+                    return 'Z';
                 }
             }
 
