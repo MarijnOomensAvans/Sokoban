@@ -36,14 +36,17 @@ namespace SokoBan
                 return true;
             }
 
-            if (destination.Movable.Type == 1 && Movable.Type == 0)
-            { 
-                if (destination.Movable.CanMove(direction))
+            if (destination.HasMovable())
+            {
+                if (destination.Movable.Type == 1 && Movable.Type == 0)
                 {
-                    destination.Movable.Move(direction);
-                    moveMovable(direction);
+                    if (destination.Movable.CanMove(direction))
+                    {
+                        destination.Movable.Move(direction);
+                        moveMovable(direction);
+                    }
+
                 }
-                
             }
 
             return false;
