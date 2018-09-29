@@ -15,12 +15,18 @@ namespace SokoBan
 
         public override bool CanMove(int direction)
         {
-            throw new NotImplementedException();
+            if (onTile.checkIfPMovableCanMove(direction))
+            {
+                return true;
+            }
+
+            return false;
         }
 
         public override void Move(int direction)
         {
-            throw new NotImplementedException();
+            Tile tile = onTile.moveMovable(direction);
+            onTile = tile;
         }
 
         public int SleeperStateOnPlayerAction()
