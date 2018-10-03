@@ -27,6 +27,10 @@ namespace SokoBan
         public override void Move(int direction)
         {
             Tile tile = onTile.moveMovable(direction);
+            if (tile.Print() == '~' || tile.Print() == ' ')
+            {
+                tile.MoveOver();
+            }
             onTile = tile;
         }
     }

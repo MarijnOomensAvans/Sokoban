@@ -12,13 +12,13 @@ namespace SokoBan
         {
             int mazeNumber = 0;
             char input = '?';
-            while (((mazeNumber < 1) || (mazeNumber > 4)) && (input != 's'))
+            while (((mazeNumber < 1) || (mazeNumber > 6)) && (input != 's'))
             {
-                Console.WriteLine("Kies een doolhof (1-4), s is stop");
+                Console.WriteLine("Kies een doolhof (1-6), s is stop");
                 ConsoleKeyInfo keyPressed = Console.ReadKey();
                 input = keyPressed.KeyChar;
                 Console.WriteLine();
-                if ((input >= '1') && (input <= '4'))
+                if ((input >= '1') && (input <= '6'))
                 {
                     mazeNumber = (int) char.GetNumericValue(keyPressed.KeyChar);
                 }

@@ -11,6 +11,7 @@ namespace SokoBan
         public abstract Tile TileDown { get; set; }
         public abstract Tile TileLeft { get; set; }
         public abstract Tile TileRight { get; set; }
+        public abstract void MoveOver();
 
         internal bool checkIfPMovableCanMove(int direction)
         {
@@ -77,6 +78,20 @@ namespace SokoBan
                 if (destination.Print()== 'x' && Movable.Type == 1)
                 {
                     Maze.CratesOnEndTiles++;
+                }
+
+                if (destination.Print() == '~')
+                {
+                    destination.MoveOver();
+                }
+
+                if (destination.Print() == ' ')
+                {
+                    if (Movable.Type == 1)
+                    {
+                        deleteMovable();
+                        return null;
+                    }
                 }
                 destination.SetMovable(Movable);
                 deleteMovable();

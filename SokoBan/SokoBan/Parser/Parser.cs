@@ -53,6 +53,9 @@ namespace SokoBan
                                 Maze.Player = new Player(t);
                                 t.Movable = Maze.Player;
                                 break;
+                            case '~':
+                                t = new TrapTile();
+                                break;
                             default:
                                 t = new EmptyTile();
                                 break;

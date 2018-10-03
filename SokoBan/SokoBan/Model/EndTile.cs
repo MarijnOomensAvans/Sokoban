@@ -39,5 +39,9 @@ namespace SokoBan
 
             return'x';
         }
+
+        public override void MoveOver()
+        {
+        }
     }
 }
