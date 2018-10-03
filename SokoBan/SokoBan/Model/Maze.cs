@@ -9,6 +9,7 @@ namespace SokoBan
     public class Maze
     {
         public Player Player { get; set; }
+        public Sleeper Sleeper { get; set; }
         public Tile OriginPoint { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
@@ -20,6 +21,14 @@ namespace SokoBan
             if (Player.CanMove(direction))
             {
                 Player.Move(direction);
+            }
+        }
+
+        public void moveSleeper(int direction)
+        {
+            if (Sleeper.CanMove(direction))
+            {
+                Sleeper.Move(direction);
             }
         }
 

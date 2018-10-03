@@ -56,6 +56,11 @@ namespace SokoBan
                             case '~':
                                 t = new TrapTile();
                                 break;
+                            case '$':
+                                t = new FloorTile();
+                                Maze.Sleeper = new Sleeper();
+                                t.Movable = Maze.Sleeper;
+                                break;
                             default:
                                 t = new EmptyTile();
                                 break;
