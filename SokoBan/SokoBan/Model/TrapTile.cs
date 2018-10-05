@@ -12,25 +12,7 @@
         {
             if (HasMovable())
             {
-                if (GetMovableType() == 0)
-                {
-                    return '@';
-                }
-
-                if (GetMovableType() == 1)
-                {
-                    return 'o';
-                }
-
-                if (GetMovableType() == 2)
-                {
-                    if (Movable.State == 1)
-                    {
-                        return '$';
-                    }
-
-                    return 'Z';
-                }
+                return Movable.Print();
             }
 
             if (_timesWalkedOver >= 3)

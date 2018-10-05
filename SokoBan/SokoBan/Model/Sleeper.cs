@@ -41,12 +41,12 @@ namespace SokoBan
         {
             Random r = new Random();
             int randomNumber;
-            if (State == 1) // if awake
+            if (!_asleep) // if awake
             {
                 randomNumber = r.Next(1, 5);
                 if (randomNumber == 4)
                 {
-                    State = 2; // go to sleep
+                    _asleep = true; // go to sleep
                 }
                 else // if it didnt fall asleep
                 {
@@ -62,7 +62,7 @@ namespace SokoBan
                 randomNumber = r.Next(1, 11);
                 if (randomNumber == 8)
                 {
-                    State = 1; // wake up
+                    _asleep = false; // wake up
                 }
             }
         }
