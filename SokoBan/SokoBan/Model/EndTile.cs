@@ -11,25 +11,7 @@
         {
             if (HasMovable())
             {
-                if (GetMovableType() == 0)
-                {
-                    return '@';
-                }
-
-                if (GetMovableType() == 1)
-                {
-                    return '0';
-                }
-
-                if (GetMovableType() == 2)
-                {
-                    if (Movable.State == 1)
-                    {
-                        return '$';
-                    }
-
-                    return 'Z';
-                }
+                return Movable.Print();
             }
 
             return'x';
