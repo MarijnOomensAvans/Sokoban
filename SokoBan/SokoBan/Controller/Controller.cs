@@ -68,12 +68,12 @@ namespace SokoBan
                 int result = inputView.GetDirection();
                 if (result == -2)
                 {
-                    return -2;
+                    return result;
                 }
 
                 if (result == -1)
                 {
-                    return -1;
+                    return result;
                 }
 
                 maze.movePlayer(result);

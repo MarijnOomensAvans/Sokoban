@@ -68,6 +68,10 @@ namespace SokoBan
                         result = 4;
                         pressed = true;
                         break;
+                    default:
+                        Console.WriteLine("");
+                        Console.WriteLine("gebruik pijljestoetsen(s = stop, r = reset)");
+                        break;
                 }
             }
             return result;

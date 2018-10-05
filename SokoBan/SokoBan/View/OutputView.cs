@@ -65,5 +65,6 @@ namespace SokoBan
             Console.WriteLine("=== HOERA OPGELOST ===");
             Console.WriteLine("press key to continue");
         }
+
     }
 }
