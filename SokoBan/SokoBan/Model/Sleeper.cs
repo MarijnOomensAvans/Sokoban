@@ -12,7 +12,7 @@ namespace SokoBan
 
         public override bool CanMove(int direction)
         {
-            if (onTile.checkIfPMovableCanMove(direction))
+            if (OnTile.checkIfPMovableCanMove(direction))
             {
                 return true;
             }
@@ -22,8 +22,8 @@ namespace SokoBan
 
         public override void Move(int direction)
         {
-            Tile tile = onTile.moveMovable(direction);
-            onTile = tile;
+            Tile tile = OnTile.moveMovable(direction);
+            OnTile = tile;
         }
 
         public void SleeperAction()

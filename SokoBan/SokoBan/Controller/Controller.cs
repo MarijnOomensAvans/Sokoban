@@ -4,56 +4,56 @@ namespace SokoBan
 {
     public class Controller
     {
-        private InputView inputView;
-        private OutputView outputView;
-        private Maze maze;
+        private InputView InputView;
+        private OutputView OutputView;
+        private Maze Maze;
 
         public Controller()
         {
-            inputView = new InputView();
-            outputView = new OutputView();
+            InputView = new InputView();
+            OutputView = new OutputView();
             StartGame();
         }
 
         private void StartGame()
         {
-            Parser parser = new Parser();
-            bool playing = true;
-            int mazeChoice = 0;
+            Parser Parser = new Parser();
+            bool Playing = true;
+            int MazeChoice = 0;
 
-            outputView.ShowStartScreen();
-            mazeChoice = inputView.WhichLevel();
-            if (mazeChoice == -1)
+            OutputView.ShowStartScreen();
+            MazeChoice = InputView.WhichLevel();
+            if (MazeChoice == -1)
             {
-                playing = false;
+                Playing = false;
             }
 
-            if (playing)
+            if (Playing)
             {
-                maze = parser.parseMaze(mazeChoice);
-                outputView.ShowMaze(maze);
-                bool resetting = true;
-                while (resetting)
+                Maze = Parser.parseMaze(MazeChoice);
+                OutputView.ShowMaze(Maze);
+                bool Resetting = true;
+                while (Resetting)
                 {
-                    int option = PlayMaze();
-                    if (option == -1)
+                    int Option = PlayMaze();
+                    if (Option == -1)
                     {
-                        resetting = false;
-                        outputView.ShowMaze(maze);
+                        Resetting = false;
+                        OutputView.ShowMaze(Maze);
                         Console.Clear();
                         StartGame();
                     }
 
-                    if (option == -2)
+                    if (Option == -2)
                     {
-                        maze = parser.parseMaze(mazeChoice);
-                        outputView.ShowMaze(maze);
+                        Maze = Parser.parseMaze(MazeChoice);
+                        OutputView.ShowMaze(Maze);
                     }
-                    if (option == 1)
+                    if (Option == 1)
                     {
-                        resetting = false;
-                        outputView.ShowMaze(maze);
-                        outputView.ShowVictoryScreen();
+                        Resetting = false;
+                        OutputView.ShowMaze(Maze);
+                        OutputView.ShowVictoryScreen();
                         Console.ReadKey();
                         Console.Clear();
                         StartGame();
@@ -64,32 +64,32 @@ namespace SokoBan
 
         private int PlayMaze()
         {
-            bool levelFinished = false;
-            int number = 0;
-            while (!levelFinished)
+            bool LevelFinished = false;
+            int Number = 0;
+            while (!LevelFinished)
             {
-                int result = inputView.GetDirection();
-                if (result == -2)
+                int Result = InputView.GetDirection();
+                if (Result == -2)
                 {
-                    return result;
+                    return Result;
                 }
 
-                if (result == -1)
+                if (Result == -1)
                 {
-                    return result;
+                    return Result;
                 }
 
-                maze.movePlayer(result);
-                if (maze.CheckGameWon())
+                Maze.movePlayer(Result);
+                if (Maze.CheckGameWon())
                 {
-                    levelFinished = true;
+                    LevelFinished = true;
                     Maze.CratesOnEndTiles = 0;
-                    number = 1;
+                    Number = 1;
                 }
-                outputView.ShowMaze(maze);
+                OutputView.ShowMaze(Maze);
             }
 
-            return number;
+            return Number;
         }
     }
 }
