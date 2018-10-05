@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SokoBan
+﻿namespace SokoBan
 {
     public abstract class Tile
     {
@@ -39,7 +34,7 @@ namespace SokoBan
 
             if (destination.HasMovable())
             {
-                if (destination.Movable.Type == 1 && (Movable.Type == 0 || Movable.Type == 2))
+                if ((destination.Movable.Type == 1 && (Movable.Type == 0 || Movable.Type == 2)) || (destination.Movable.Type == 0 && Movable.Type == 2))
                 {
                     if (destination.Movable.CanMove(direction))
                     {

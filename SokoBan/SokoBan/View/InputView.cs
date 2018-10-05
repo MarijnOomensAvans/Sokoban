@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Cryptography;
-using System.Text;
 
 namespace SokoBan
 {
@@ -29,7 +25,7 @@ namespace SokoBan
             }
             if (input == 's')
             {
-               Environment.Exit(0);
+               mazeNumber = -1;
             }
             return mazeNumber;
         }
