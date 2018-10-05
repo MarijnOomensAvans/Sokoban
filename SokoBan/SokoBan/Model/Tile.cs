@@ -39,7 +39,7 @@ namespace SokoBan
 
             if (destination.HasMovable())
             {
-                if (destination.Movable.Type == 1 && (Movable.Type == 0 || Movable.Type == 2))
+                if ((destination.Movable.Type == 1 && (Movable.Type == 0 || Movable.Type == 2)) || (destination.Movable.Type == 0 && Movable.Type == 2))
                 {
                     if (destination.Movable.CanMove(direction))
                     {
