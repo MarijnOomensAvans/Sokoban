@@ -79,7 +79,7 @@ namespace SokoBan
                     return Result;
                 }
 
-                Maze.movePlayer(Result);
+                Maze.MovePlayer(Result);
                 if (Maze.CheckGameWon())
                 {
                     LevelFinished = true;
