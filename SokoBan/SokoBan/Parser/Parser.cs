@@ -59,6 +59,7 @@ namespace SokoBan
                             case '$':
                                 t = new FloorTile();
                                 Maze.Sleeper = new Sleeper();
+                                Maze.Sleeper.onTile = t;
                                 t.Movable = Maze.Sleeper;
                                 break;
                             default:

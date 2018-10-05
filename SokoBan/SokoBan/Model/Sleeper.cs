@@ -29,7 +29,7 @@ namespace SokoBan
             onTile = tile;
         }
 
-        public int SleeperStateOnPlayerAction()
+        public void SleeperAction()
         {
             Random r = new Random();
             int randomNumber;
@@ -40,16 +40,22 @@ namespace SokoBan
                 {
                     State = 2; // go to sleep
                 }
-                return State;
+                else // if it didnt fall asleep
+                {
+                    randomNumber = r.Next(1, 5);
+                    if (CanMove(randomNumber))
+                    {
+                        Move(randomNumber);
+                    }
+                }
             }
             else // if asleep
             {
                 randomNumber = r.Next(1, 11);
                 if (randomNumber == 8)
                 {
-                    State = 1;
+                    State = 1; // wake up
                 }
-                return State;
             }
         }
     }

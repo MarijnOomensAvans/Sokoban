@@ -21,14 +21,10 @@ namespace SokoBan
             if (Player.CanMove(direction))
             {
                 Player.Move(direction);
-            }
-        }
-
-        public void moveSleeper(int direction)
-        {
-            if (Sleeper.CanMove(direction))
-            {
-                Sleeper.Move(direction);
+                if (Sleeper != null)
+                {
+                    Sleeper.SleeperAction();
+                }
             }
         }
 
