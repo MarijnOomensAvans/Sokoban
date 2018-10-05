@@ -2,7 +2,7 @@
 {
     public abstract class Movable
     {
-        public Tile onTile { get; set; }
+        public Tile OnTile { get; set; }
         public int Type { get; set; }
         public int State { get; set; }
 
