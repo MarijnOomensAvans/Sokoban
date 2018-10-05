@@ -7,7 +7,6 @@ namespace SokoBan
         static void Main(string[] args)
         {
             new Controller();
-            Console.ReadKey();
         }
     }
 }
