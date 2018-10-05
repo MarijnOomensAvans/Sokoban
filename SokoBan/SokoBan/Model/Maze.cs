@@ -15,10 +15,7 @@
             if (Player.CanMove(direction))
             {
                 Player.Move(direction);
-                if (Sleeper != null)
-                {
-                    Sleeper.SleeperAction();
-                }
+                Sleeper?.SleeperAction();
             }
         }
 
