@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SokoBan
+﻿namespace SokoBan
 {
     class Program
     {

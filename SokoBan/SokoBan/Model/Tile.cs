@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace SokoBan
+﻿namespace SokoBan
 {
     public abstract class Tile
     {
