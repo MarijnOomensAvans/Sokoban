@@ -6,6 +6,7 @@
         public int Type { get; set; }
         public int State { get; set; }
 
+        public abstract char Print();
         public abstract bool CanMove(int direction);
         public abstract void Move(int direction);
     }

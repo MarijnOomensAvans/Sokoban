@@ -24,5 +24,10 @@
             Tile Tile = OnTile.moveMovable(direction);
             OnTile = Tile;
         }
+
+        public override char Print()
+        {
+            return '@';
+        }
     }
 }

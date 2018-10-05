@@ -4,9 +4,10 @@ namespace SokoBan
 {
     public class Sleeper : Movable
     {
+        private bool _asleep = false;
+
         public Sleeper()
         {
-            State = 1; // state 1 is awake, state 2 is asleep
             Type = 2;
         }
 
@@ -24,6 +25,16 @@ namespace SokoBan
         {
             Tile tile = OnTile.moveMovable(direction);
             OnTile = tile;
+        }
+
+        public override char Print()
+        {
+            if (_asleep)
+            {
+                return 'Z';
+            }
+
+            return '$';
         }
 
         public void SleeperAction()
