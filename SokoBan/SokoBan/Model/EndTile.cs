@@ -9,16 +9,12 @@
 
         public override char Print()
         {
-            if (HasMovable())
+            if (Movable != null)
             {
                 return Movable.Print();
             }
 
             return'x';
-        }
-
-        public override void MoveOver()
-        {
         }
     }
 }

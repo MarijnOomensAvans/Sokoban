@@ -4,32 +4,24 @@ namespace SokoBan
 {
     public class Sleeper : Movable
     {
-        private bool _asleep = false;
+
+        public bool Asleep { get; set; }
 
         public Sleeper()
         {
-            Type = 2;
+            Asleep = false;
         }
 
-        public override bool CanMove(int direction)
-        {
-            if (OnTile.checkIfPMovableCanMove(direction))
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public override void Move(int direction)
+        public override bool Move(int direction)
         {
             Tile tile = OnTile.moveMovable(direction);
             OnTile = tile;
+            return true;
         }
 
         public override char Print()
         {
-            if (_asleep)
+            if (Asleep)
             {
                 return 'Z';
             }
@@ -41,20 +33,18 @@ namespace SokoBan
         {
             Random r = new Random();
             int randomNumber;
-            if (!_asleep) // if awake
+            if (!Asleep) // if awake
             {
                 randomNumber = r.Next(1, 5);
                 if (randomNumber == 4)
                 {
-                    _asleep = true; // go to sleep
+                    Asleep = true; // go to sleep
                 }
                 else // if it didnt fall asleep
                 {
                     randomNumber = r.Next(1, 5);
-                    if (CanMove(randomNumber))
-                    {
-                        Move(randomNumber);
-                    }
+                    Move(randomNumber);
+
                 }
             }
             else // if asleep
@@ -62,7 +52,7 @@ namespace SokoBan
                 randomNumber = r.Next(1, 11);
                 if (randomNumber == 8)
                 {
-                    _asleep = false; // wake up
+                    Asleep = false; // wake up
                 }
             }
         }

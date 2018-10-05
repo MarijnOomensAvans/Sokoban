@@ -10,7 +10,7 @@
 
         public override char Print()
         {
-            if (HasMovable())
+            if (Movable != null)
             {
                 return Movable.Print();
             }
@@ -23,7 +23,7 @@
             return '~';
         }
 
-        public override void MoveOver()
+        public void MoveOver()
         {
             _timesWalkedOver++;
         }

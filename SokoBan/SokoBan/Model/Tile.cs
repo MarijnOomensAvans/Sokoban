@@ -6,52 +6,8 @@
         public abstract Tile TileDown { get; set; }
         public abstract Tile TileLeft { get; set; }
         public abstract Tile TileRight { get; set; }
-        public abstract void MoveOver();
-
-        internal bool checkIfPMovableCanMove(int direction)
-        {
-            Tile destination = null;
-            switch (direction)
-            {
-                case 1:
-                    destination = TileUp;
-                    break;
-                case 2:
-                    destination = TileDown;
-                    break;
-                case 3:
-                    destination = TileLeft;
-                    break;
-                case 4:
-                    destination = TileRight;
-                    break;
-            }
-
-            if (destination != null && !destination.HasMovable() && destination.Print() != '#')
-            {
-                return true;
-            }
-
-            if (destination.HasMovable())
-            {
-                if ((destination.Movable.Type == 1 && (Movable.Type == 0 || Movable.Type == 2)) || (destination.Movable.Type == 0 && Movable.Type == 2))
-                {
-                    if (destination.Movable.CanMove(direction))
-                    {
-                        destination.Movable.Move(direction);
-                        return true;
-                    }
-                    
-                }
-                if (destination.Movable.Type == 2 && Movable.Type == 0)
-                {
-                    destination.Movable.State = 1;
-                    return false;
-                }
-            }
-
-            return false;
-        }
+        public Movable Movable { get; set; }
+        public abstract char Print();
 
         internal Tile moveMovable(int direction)
         {
@@ -71,13 +27,17 @@
                     destination = TileRight;
                     break;
             }
+            if (destination.Movable != null)
+            {
+                destination.Movable.Move(direction);
+            }
 
 
             if (destination != null && !destination.HasMovable())
             {
                 if (destination.Print()== 'x' && Movable.Type == 1)
                 {
-                    Maze.CratesOnEndTiles++;
+                    
                 }
 
                 if (destination.Print() == '~')
@@ -106,30 +66,7 @@
             Movable = movabable;
         }
 
-        public Movable Movable { get; set; }
 
-
-        public bool HasMovable()
-        {
-            if (Movable != null)
-            {
-                return true;
-            }
-
-            return false;
-        }
-
-        public int GetMovableType()
-        {
-            return Movable.Type;
-        }
-
-        public void deleteMovable()
-        {
-            Movable = null;
-        }
-
-        public abstract char Print();
 
     }
 }

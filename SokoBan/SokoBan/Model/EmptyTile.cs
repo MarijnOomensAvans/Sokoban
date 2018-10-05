@@ -11,8 +11,5 @@
         {
             return ' ';
         }
-        public override void MoveOver()
-        {
-        }
     }
 }

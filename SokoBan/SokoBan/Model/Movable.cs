@@ -3,10 +3,8 @@
     public abstract class Movable
     {
         public Tile OnTile { get; set; }
-        public int Type { get; set; }
 
         public abstract char Print();
-        public abstract bool CanMove(int direction);
-        public abstract void Move(int direction);
+        public abstract bool Move(int direction);
     }
 }
