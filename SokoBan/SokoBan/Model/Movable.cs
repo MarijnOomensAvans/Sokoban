@@ -5,6 +5,16 @@
         public Tile OnTile { get; set; }
 
         public abstract char Print();
-        public abstract bool Move(int direction);
+        public bool Move(int direction)
+        {
+            Tile tile = OnTile.moveMovable(direction);
+            if (tile != null)
+            {
+                OnTile = tile;
+                return true;
+            }
+            return false;
+        }
+
     }
 }

@@ -12,13 +12,6 @@ namespace SokoBan
             Asleep = false;
         }
 
-        public override bool Move(int direction)
-        {
-            Tile tile = OnTile.moveMovable(direction);
-            OnTile = tile;
-            return true;
-        }
-
         public override char Print()
         {
             if (Asleep)

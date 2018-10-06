@@ -10,7 +10,7 @@
         public int AmountOfEndTiles { get; set; }
         public static int CratesOnEndTiles { get; set; }
 
-        public void movePlayer(int direction)
+        public void MovePlayer(int direction)
         {
             Player.Move(direction);
             if (Sleeper != null)

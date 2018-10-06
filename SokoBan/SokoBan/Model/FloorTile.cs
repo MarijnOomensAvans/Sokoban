@@ -7,6 +7,20 @@
         public override Tile TileLeft { get; set; }
         public override Tile TileRight { get; set; }
 
+        public override bool MoveTo(Movable movable, int direction)
+        {
+            if (Movable != null)
+            {
+                if (Movable.Move(direction)) {
+                    Movable = movable;
+                    return true;
+                }
+                return false;
+            }
+            Movable = movable;
+            return true;
+        }
+
         public override char Print()
         {
             if (Movable != null)

@@ -27,5 +27,22 @@
         {
             _timesWalkedOver++;
         }
+
+        public override bool MoveTo(Movable movable, int direction)
+        {
+            if (Movable != null)
+            {
+                Movable.Move(direction);
+                Movable = movable;
+                return true;
+            }
+            if (movable.Print() == 'o' || _timesWalkedOver >= 3)
+            {
+                Movable = null;
+                return true;
+            }
+            Movable = movable;
+            return true;
+        }
     }
 }

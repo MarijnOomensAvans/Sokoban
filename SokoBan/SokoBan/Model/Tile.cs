@@ -1,4 +1,6 @@
-﻿namespace SokoBan
+﻿using System;
+
+namespace SokoBan
 {
     public abstract class Tile
     {
@@ -8,6 +10,8 @@
         public abstract Tile TileRight { get; set; }
         public Movable Movable { get; set; }
         public abstract char Print();
+
+        public abstract bool MoveTo(Movable movable, int direction);
 
         internal Tile moveMovable(int direction)
         {
@@ -33,29 +37,12 @@
             }
 
 
-            if (destination != null && !destination.HasMovable())
+            if (destination != null)
             {
-                if (destination.Print()== 'x' && Movable.Type == 1)
-                {
-                    
+                if (destination.MoveTo(Movable,direction)) {
+                    Movable = null;
+                    return destination;
                 }
-
-                if (destination.Print() == '~')
-                {
-                    destination.MoveOver();
-                }
-
-                if (destination.Print() == ' ')
-                {
-                    if (Movable.Type == 1)
-                    {
-                        deleteMovable();
-                        return null;
-                    }
-                }
-                destination.SetMovable(Movable);
-                deleteMovable();
-                return destination;
             }
 
             return null;
