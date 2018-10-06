@@ -5,7 +5,7 @@
         public Tile OnTile { get; set; }
 
         public abstract char Print();
-        public bool Move(int direction)
+        public virtual bool Move(int direction)
         {
             Tile tile = OnTile.moveMovable(direction);
             if (tile != null)

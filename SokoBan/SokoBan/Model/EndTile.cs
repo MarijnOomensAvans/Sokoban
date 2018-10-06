@@ -15,10 +15,6 @@
                 Movable = movable;
                 return true;
             }
-            /*if(movable.Print() == 'o')
-            {
-                //TODO: Hier moet wat beters voor worden bedacht
-            }*/
             Movable = movable;
             return true;
         }
