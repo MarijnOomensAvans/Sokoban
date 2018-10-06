@@ -9,9 +9,17 @@
 
         public override bool MoveTo(Movable movable, int direction)
         {
+            if (movable is Crate)
+            {
+                if(Movable != null)
+                {
+                    return false;
+                }
+            }
             if (Movable != null)
             {
-                if (Movable.Move(direction)) {
+                if (Movable.Move(direction))
+                {
                     Movable = movable;
                     return true;
                 }
@@ -19,6 +27,7 @@
             }
             Movable = movable;
             return true;
+
         }
 
         public override char Print()
