@@ -9,12 +9,18 @@
 
         public override bool MoveTo(Movable movable, int direction)
         {
+            //Type check
             if (movable is Crate)
             {
                 if(Movable != null)
                 {
                     return false;
                 }
+            }
+            //Type check
+            if(Movable is Sleeper)
+            {
+                return false;
             }
             if (Movable != null)
             {

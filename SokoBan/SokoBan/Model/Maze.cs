@@ -12,10 +12,12 @@
 
         public void MovePlayer(int direction)
         {
-            Player.Move(direction);
-            if (Sleeper != null)
+            if (Player.Move(direction))
             {
-                Sleeper.SleeperAction();
+                if (Sleeper != null)
+                {
+                    Sleeper.SleeperAction();
+                }
             }
 
         }
