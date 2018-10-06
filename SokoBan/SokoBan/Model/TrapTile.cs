@@ -23,25 +23,25 @@
             return '~';
         }
 
-        public void MoveOver()
-        {
-            _timesWalkedOver++;
-        }
-
         public override bool MoveTo(Movable movable, int direction)
         {
             if (Movable != null)
             {
-                Movable.Move(direction);
-                Movable = movable;
-                return true;
+                if (Movable.Move(direction))
+                {
+                    Movable = movable;
+                    _timesWalkedOver++;
+                    return true;
+                }
+                else return false;
             }
-            if (movable.Print() == 'o' || _timesWalkedOver >= 3)
+            if (movable.Print() == 'o' && _timesWalkedOver >= 3)
             {
                 Movable = null;
                 return true;
             }
             Movable = movable;
+            _timesWalkedOver++;
             return true;
         }
     }

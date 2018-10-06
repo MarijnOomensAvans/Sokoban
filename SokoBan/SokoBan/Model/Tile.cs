@@ -47,13 +47,5 @@ namespace SokoBan
 
             return null;
         }
-
-        private void SetMovable(Movable movabable)
-        {
-            Movable = movabable;
-        }
-
-
-
     }
 }
