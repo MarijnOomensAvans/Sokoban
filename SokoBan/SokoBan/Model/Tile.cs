@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace SokoBan
+﻿namespace SokoBan
 {
     public abstract class Tile
     {
@@ -30,10 +28,6 @@ namespace SokoBan
                 case 4:
                     destination = TileRight;
                     break;
-            }
-            if (destination.Movable != null)
-            {
-                destination.Movable.Move(direction);
             }
 
 

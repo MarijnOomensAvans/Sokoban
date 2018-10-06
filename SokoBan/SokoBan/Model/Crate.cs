@@ -14,6 +14,7 @@
             Tile tile = OnTile.moveMovable(direction);
             if (tile != null)
             {
+                //Typecheck
                 if(tile is EndTile)
                 {
                     _onEndTile = true;

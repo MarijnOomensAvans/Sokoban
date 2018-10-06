@@ -35,7 +35,8 @@
                 }
                 else return false;
             }
-            if (movable.Print() == 'o' && _timesWalkedOver >= 3)
+            //Type check
+            if ((movable is Crate) && _timesWalkedOver >= 3)
             {
                 Movable = null;
                 return true;
