@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="SokoBan.Program" Collapsed="true">
-    <Position X="9.25" Y="3.75" Width="1.5" />
+    <Position X="1" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>App\Program.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.InputView">
-    <Position X="5.75" Y="1.25" Width="1.5" />
+    <Position X="1" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>View\InputView.cs</FileName>
+      <FileName>Presentation\InputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.OutputView">
-    <Position X="9.75" Y="1.25" Width="1.5" />
+    <Position X="4.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAQAQAAAAAAABAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
-      <FileName>View\OutputView.cs</FileName>
+      <FileName>Presentation\OutputView.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Parser">
-    <Position X="4.75" Y="3" Width="1.5" />
+    <Position X="6.5" Y="3" Width="1.5" />
     <NestedTypes>
       <Class Name="SokoBan.Parser.GridList" Collapsed="true">
         <TypeIdentifier>
@@ -34,97 +34,117 @@
       <HashCode>AAAEEAAAAAAAAIAAAAAAAAEAAAAAAAAAAAAAAAIBAAA=</HashCode>
       <FileName>Parser\Parser.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="Maze" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SokoBan.Controller">
-    <Position X="7.25" Y="3.5" Width="1.5" />
+    <Position X="2.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAgAAAAAAAAAAAiAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAgAAAAAAIAAAAgAAAAAAAAAAAEAAIAAAA=</HashCode>
       <FileName>Controller\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Field Name="inputView" />
-      <Field Name="outputView" />
-      <Field Name="maze" />
+      <Field Name="InputView" />
+      <Field Name="Maze" />
+      <Field Name="OutputView" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SokoBan.Maze">
-    <Position X="6.5" Y="5.75" Width="1.5" />
+    <Position X="7" Y="5.75" Width="1.5" />
+    <AssociationLine Name="Player" Type="SokoBan.Player">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.669" Y="0.393" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAABABACAAAAAACAAAEAAAAAAAAAAAAAAAQAgEAA=</HashCode>
+      <HashCode>AAAAAABABACAIAAAAAAAAEAAAEAAAAAAAAAAAQAgEAA=</HashCode>
       <FileName>Model\Maze.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Player" />
       <Property Name="OriginPoint" />
+      <Property Name="Sleeper" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SokoBan.Tile">
-    <Position X="10" Y="4.75" Width="1.5" />
+    <Position X="10" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAEIAEABAACAAQAAAAAMIAhABAAAAAASAEAAg=</HashCode>
+      <HashCode>QAAAAAAQAIAAAAAAAAAAAAAAAIAIhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Tile.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Movable" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SokoBan.Wall">
-    <Position X="8.5" Y="9.5" Width="1.5" />
+    <Position X="9.75" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAIhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Wall.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Crate">
-    <Position X="2.75" Y="7" Width="1.5" />
+    <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAgAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Crate.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.EndTile">
-    <Position X="10.5" Y="9.5" Width="1.5" />
+    <Position X="11.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAIhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\EndTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Player">
-    <Position X="2.75" Y="4.75" Width="1.5" />
+    <Position X="4.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.FloorTile">
-    <Position X="6.75" Y="9.5" Width="1.5" />
+    <Position X="8" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAIhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\FloorTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.EmptyTile">
-    <Position X="5" Y="9.5" Width="1.5" />
+    <Position X="6.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAIhAAAAAAAAAAEAAA=</HashCode>
       <FileName>Model\EmptyTile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Movable">
-    <Position X="1" Y="5.75" Width="1.5" />
+    <Position X="1.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>Model\Movable.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.Sleeper">
-    <Position X="2.75" Y="8.75" Width="1.5" />
+    <Position X="2.5" Y="9.25" Width="1.5" />
+    <InheritanceLine Type="SokoBan.Movable" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="2.25" Y="8.497" />
+        <Point X="2.25" Y="8.888" />
+        <Point X="3.25" Y="8.888" />
+        <Point X="3.25" Y="9.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>AAAAACAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAQA=</HashCode>
       <FileName>Model\Sleeper.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SokoBan.TrapTile">
-    <Position X="12.5" Y="9.5" Width="1.5" />
+    <Position X="13.25" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAAhAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAIAIhAAAABAAAAAEAAA=</HashCode>
       <FileName>Model\TrapTile.cs</FileName>
     </TypeIdentifier>
   </Class>
