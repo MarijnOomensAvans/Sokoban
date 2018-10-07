@@ -71,6 +71,7 @@ namespace SokoBan
                 int Result = InputView.GetDirection();
                 if (Result == -2)
                 {
+                    Maze.CratesOnEndTiles = 0;
                     return Result;
                 }
 
